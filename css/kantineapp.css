@@ -1,0 +1,495 @@
+body {
+    font-family: Roboto, sans-serif;
+    color: #000;
+    font-size: 1em;
+    line-height: 150%;
+    font-weight: 300;
+    margin: 0;
+    background: #f2f1f8;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    -webkit-transition: color 250ms ease;
+    transition: color 250ms ease;
+}
+
+a:hover {
+    color: #4d6aa9;
+    -webkit-transition: color 250ms ease;
+    transition: color 250ms ease;
+}
+
+h2 {
+    font-family: Roboto, sans-serif;
+    font-size: 1.2em;
+    line-height: 150%;
+    font-weight: 300;
+}
+
+h3 {
+    font-family: Roboto, sans-serif;
+    font-size: 1em;
+    line-height: 150%;
+    font-weight: 300;
+}
+
+input {
+    width: 250px;
+    margin: 10px 0;
+    padding: 10px 5px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    font: inherit;
+    font-size: 1em;
+    line-height: 150%;
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+    outline: none;
+    vertical-align: middle;
+    -webkit-transition: border-color 250ms ease;
+    transition: border-color 250ms ease;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    background: #fff;
+    box-shadow: 0 4px 5px -3px rgba(0, 0, 0, .2);
+}
+
+header div.brand {
+    width: 125px;
+}
+
+header div.brand img {
+    width: 100%;
+}
+
+header div.navigation {
+    display: flex;
+    align-items: center;
+}
+
+header div.navigation ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header div.navigation ul li {
+    width: 115px;
+    margin: 0 10px;
+    padding: 10px 5px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    font-size: 0.9em;
+    text-align: center;
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+
+header div.navigation ul:last-of-type li:last-of-type {
+    margin-right: 0;
+}
+
+header div.navigation ul li:hover {
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .3);
+    cursor: pointer;
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+
+header div.navigation ul li.current {
+    background: #4d6aa9;
+    color: #fff;
+}
+
+header div.navigation div.divider {
+    width: 1px;
+    height: 20px;
+    margin: 0 12.5px;
+    background: rgba(0, 0, 0, .2);
+}
+
+section {
+    display: flex;
+    min-height: 68.5vh;
+    margin-top: 25px;
+    padding: 25px;
+}
+
+section.mainSection {
+    min-height: 80vh;
+    align-items: center;
+    justify-content: center;
+}
+
+section.mainSection div.mainBox {
+    justify-content: center;
+    margin-top: 9vh;
+    padding: 25px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .3);
+}
+
+section div.brand {
+    width: 125px;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+section div.brand img {
+    width: 100%;
+}
+
+section.mainSection div.mainBox div.inputGroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.inputGroup input.inputField:focus {
+    border: 1px solid #4d6aa9;
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+
+div.inputGroup input.inputField.formError {
+    border: 1px solid #d30915;
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+
+div.inputGroup div.buttonGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+input.button {
+    width: 115px;
+    border-radius: 5px;
+    background: #4d6aa9;
+    color: #fff;
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+
+input.button:hover {
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .3);
+    cursor: pointer;
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+
+div.inputGroup div.buttonGroup input.subButton {
+    background: #fff;
+    color: #a9a9a9;
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+
+div.inputGroup input.largeButton {
+    width: 125px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+
+section.mainSection div.mainBox p.createUserAbort {
+    font-size: 0.8em;
+    text-align: center;
+    color: #a9a9a9;
+}
+
+section.mainSection div.mainBox p.createUserAbort a {
+    color: #a9a9a9;
+}
+
+section.mainSection div.mainBox p.createUserAbort a:hover {
+    color: #4d6aa9;
+}
+
+section.studentSection {
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+section.studentSection div.collection {
+    flex-grow: 1;
+    margin-right: 30px;
+}
+
+section.studentSection div.collection div.tabcontent {
+    width: 100%;
+    display: none;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+section.studentSection div.collection div.tabcontent.current {
+    display: flex;
+}
+
+section.studentSection div.collection div.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 12.5px 45px 12.5px;
+    padding: 15px;
+    width: 225px;
+    height: 225px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .3);
+}
+
+section.studentSection div.collection div.item:nth-child(4), section.studentSection div.collection div.item:nth-child(5), section.studentSection div.collection div.item:nth-child(6) {
+    margin-bottom: 0;
+}
+
+section.studentSection div.collection div.item div.itemImg {
+    width: 75px;
+    height: 75px;
+}
+
+section.studentSection div.collection div.item div.itemImg img {
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+section.studentSection div.collection div.item h3 {
+    margin-bottom: 0;
+}
+
+section.studentSection div.collection div.item p.itemDescription {
+    font-size: 0.8em;
+    color: #a9a9a9;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+section.studentSection div.collection div.item p.itemDescription:first-of-type {
+    margin-top: 10px;
+}
+
+section.studentSection div.collection div.item p.itemDescription:last-of-type {
+    margin-bottom: 10px;
+}
+
+section.studentSection div.collection div.item input.orderButton {
+    width: 80px;
+    margin: auto;
+    border: none;
+    padding: 7.5px 0px;
+    font-size: 0.75em;
+}
+
+section.studentSection div.collection div.item input.orderButton:hover {
+    cursor: pointer;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .3);
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+
+section.studentSection div.basket {
+    min-width: 225px;
+    min-height: 525px;
+    padding: 15px 25px;
+    text-align: center;
+    position: relative;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .3);
+}
+
+section.studentSection div.basket div.basketContent {
+    display: flex;
+    flex-direction: column;
+    height: 340px;
+    overflow: scroll;
+}
+
+section.studentSection div.basket div.basketContent div.basketRow {
+    display: flex;
+    border-bottom: 1px dotted rgba(0, 0, 0, .2);
+    align-items: center;
+    flex-shrink: 0;
+}
+
+section.studentSection div.basket div.basketContent div.basketRow div.itemRow {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+section.studentSection div.basket div.basketContent div.basketRow div.itemRow p {
+    font-size: 0.8em;
+    margin-bottom: 0.5em;
+}
+
+section.studentSection div.basket div.itemRow p.itemCount {
+    margin-right: 5px;
+}
+
+section.studentSection div.basket div.basketContent div.basketRow div.clearItem {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    margin-top: 3px;
+}
+
+section.studentSection div.basket div.basketContent div.basketRow div.clearItem:hover {
+    cursor: pointer;
+}
+
+section.studentSection div.basket div.buttonGroup {
+    width: 225px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 15px;
+}
+
+section.studentSection div.basket div.buttonGroup input {
+    width: 100px;
+    outline: none;
+    font-size: 0.9em;
+    background: #4d6aa9;
+    color: #fff;
+    border-radius: 5px;
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+
+section.studentSection div.basket div.buttonGroup input.clearBasketButton {
+    background: #fff;
+    color: #a9a9a9;
+}
+
+section.studentSection div.basket input.button:hover, section.studentSection div.basket input.mainButton:hover {
+    cursor: pointer;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .3);
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+
+div.orderBox {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    min-height: 525px;
+}
+
+div.orderBox div.orderList {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    margin: auto;
+    margin-top: 0px;
+    border-radius: 5px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .3);
+}
+
+div.orderBox div.staffOrderList {
+    width: 80%;
+}
+
+div.orderBox div.staffOrderList div#staffOrderContent div.orderValue input {
+    width: 100px;
+    font-size: 0.8em;
+}
+
+div.orderBox div.orderList div.orderRow, div.orderBox div.orderList div#emptyOrderList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dotted rgba(0, 0, 0, .2);
+}
+
+div.orderBox div.orderList div#emptyOrderList {
+    display: block;
+}
+
+div.orderBox div.orderList div#orderContent {
+    display: flex;
+    flex-direction: column;
+}
+
+div.orderBox div.orderList div.orderHeaderRow {
+    display: flex;
+    border-bottom: 0;
+}
+
+div.orderBox div.orderList div#emptyOrderList div.emptyOrderList {
+    width: 100%;
+}
+
+div.orderBox div.orderList div#emptyOrderList div.emptyOrderList p {
+    color: red;
+}
+
+div.orderBox div.orderList div.orderRow:last-of-type {
+    border-bottom: 0;
+}
+
+div.orderBox div.orderList div.orderRow div.orderHeading {
+    width: 25%;
+    background: #4d6aa9;
+    color: #fff;
+}
+
+div.orderBox div.orderList div.orderRow div.orderHeading:first-of-type {
+    border-radius: 5px 0 0 0;
+}
+
+div.orderBox div.orderList div.orderRow div.orderHeading:last-of-type {
+    border-radius: 0 5px 0 0;
+}
+
+div.orderBox div.orderList div.orderRow div.orderValue {
+    width: 25%;
+}
+
+div.orderBox div.orderList div.orderRow p.notReady {
+    color: red;
+}
+
+div.orderBox div.orderList div.orderRow p.ready {
+    color: green;
+}
+
+footer {
+    padding: 10px 25px;
+    font-size: 0.8em;
+    text-align: center;
+    color: #a9a9a9;
+}
