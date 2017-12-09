@@ -1,0 +1,87 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CBS Kantine App</title>
+    <link rel="stylesheet" type="text/css" href="css/kantineapp.css">
+    <link rel="icon" type="image/icon" href="img/icon.png">
+</head>
+<body>
+<header>
+    <div class="brand">
+        <a src="#"><img src="img/logo.png"></a>
+    </div>
+    <div class="navigation">
+        <ul>
+            <li id="tab1" class="tabs current" onclick="openTab(event, 'sandwiches')">Sandwiches</li>
+            <li id="tab2" class="tabs" onclick="openTab(event, 'pastries')">Pastries</li>
+            <li id="tab3" class="tabs" onclick="openTab(event, 'smoothies')">Smoothies</li>
+            <li id="tab4" class="tabs" onclick="openTab(event, 'orders')">Orders</li>
+        </ul>
+        <div class="divider">
+        </div>
+        <ul>
+            <li id="logOutButton">Log out</li>
+        </ul>
+    </div>
+</header>
+<section class="studentSection">
+    <div class="collection">
+        <div id="sandwiches" class="tabcontent">
+
+        </div>
+        <div id="pastries" class="tabcontent">
+
+        </div>
+        <div id="smoothies" class="tabcontent">
+
+        </div>
+        <div id="orders" class="tabcontent">
+            <div class="orderBox">
+                <div class="orderList">
+                    <div class="orderRow orderHeaderRow">
+                        <div class="orderHeading">
+                            <p>ID</p>
+                        </div>
+                        <div class="orderHeading">
+                            <p>Items</p>
+                        </div>
+                        <div class="orderHeading">
+                            <p>Total price</p>
+                        </div>
+                        <div class="orderHeading">
+                            <p>Status</p>
+                        </div>
+                    </div>
+                    <div id="emptyOrderList">
+                        <div class="emptyOrderList">
+                            <p id="emptyOrderListText">You haven't placed any orders yet</p>
+                        </div>
+                    </div>
+                    <div id="orderContent">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="basket">
+        <h3>Basket</h3>
+        <div id="basketContent" class="basketContent">
+
+        </div>
+        <div id="totalSum">
+        </div>
+        <div class="buttonGroup">
+            <input id="checkoutButton" class="button checkoutButton" type="submit" value="Checkout">
+            <input id="clearBasketButton" class="button clearBasketButton" type="submit" value="Clear basket">
+        </div>
+    </div>
+</section>
+<footer>
+    <p class="footerText">Kantine App &copy; 2017</p>
+</footer>
+<script type="text/javascript" src="lib/jquery.js"></script>
+<script type="text/javascript" src="js/SDk.js"></script>
+<script type="text/javascript" src="js/student.js"></script>
+</body>
+</html>
