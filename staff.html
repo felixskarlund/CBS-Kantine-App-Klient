@@ -1,0 +1,54 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CBS Kantine App</title>
+    <link rel="stylesheet" type="text/css" href="css/kantineapp.css">
+    <link rel="icon" type="image/icon" href="img/icon.png">
+</head>
+<body>
+<header>
+    <div class="brand">
+        <a onclick="window.location.reload()"><img src="img/logo.png"></a>
+    </div>
+    <div class="navigation">
+        <ul>
+            <li class="current" onclick="window.location.reload()">Orders</li>
+        </ul>
+        <div class="divider">
+        </div>
+        <ul>
+            <li id="logOutButton">Log out</li>
+        </ul>
+    </div>
+</header>
+<section class="personelSection">
+    <div class="orderBox">
+        <div class="orderList staffOrderList">
+            <div class="orderRow orderHeaderRow">
+                <div class="orderHeading">
+                    <p>ID</p>
+                </div>
+                <div class="orderHeading">
+                    <p>Items</p>
+                </div>
+                <div class="orderHeading">
+                    <p>Total price</p>
+                </div>
+                <div class="orderHeading">
+                    <p>Status</p>
+                </div>
+            </div>
+            <div id="staffOrderContent">
+
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <p class="footerText">Kantine App &copy; 2017</p>
+</footer>
+<script type="text/javascript" src="lib/jquery.js"></script>
+<script type="text/javascript" src="js/SDK.js"></script>
+<script type="text/javascript" src="js/staff.js"></script>
+</body>
+</html>
