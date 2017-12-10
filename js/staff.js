@@ -35,7 +35,6 @@ $(document).ready( () => {
                   <input class="button makeReady" data-order-id="${order.orderId}" type="submit" value="Make ready">
                </div>
             </div>`;
-
             $("#staffOrderContent").append(orderHtml);
         })
 
