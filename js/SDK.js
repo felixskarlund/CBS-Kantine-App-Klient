@@ -261,7 +261,7 @@ const SDK = {
             var isEncrypted = true;
             if (input != null && input != "") {
                 if (isEncrypted) {
-                    var key = ['Y', 'O', 'L', 'O']; //Can be any chars, and any size array
+                    var key = ['Y', 'O', 'L', 'O'];
                     var output = [];
 
                     for (var i = 0; i < input.length; i++) {
