@@ -36,6 +36,7 @@ $(document).ready( () => {
         }
     });
 
+    // Function to select all pastries from database
     SDK.Items.getPastries( (error, items) => {
         if(error) {
             alert("Error fetching pastries.");
@@ -69,6 +70,7 @@ $(document).ready( () => {
         }
     });
 
+    // Function to select all smoothies from database
     SDK.Items.getSmoothies( (error, items) => {
         if(error) {
             alert("Error fetching smoothies.");
