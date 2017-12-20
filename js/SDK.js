@@ -1,6 +1,8 @@
 const SDK = {
 
     serverURL: "http://localhost:8080/api",
+
+    // Structure for AJAX-requests to the server
     request: (options, callback) => {
         let headers = {};
 
@@ -30,6 +32,7 @@ const SDK = {
         });
     },
 
+    // Function for login
     login: (username, password, callback) => {
         SDK.request({
             method:"POST",
@@ -50,6 +53,7 @@ const SDK = {
         })
     },
 
+    // Function for log out
     logOut: (callback) => {
         SDK.request({
             method:"POST",
@@ -70,6 +74,8 @@ const SDK = {
     },
 
     Users: {
+
+        // Function for creating user
         createUser: (username, password, callback) => {
             SDK.request({
                 method: "POST",
@@ -87,6 +93,8 @@ const SDK = {
     },
 
     Items: {
+
+        // Function for selecting all sandwiches from database
         getSandwiches: (callback) => {
             SDK.request({
                 method: "GET",
@@ -101,6 +109,7 @@ const SDK = {
             })
         },
 
+        // Function for selecting all pastries from database
         getPastries: (callback) => {
             SDK.request({
                 method: "GET",
@@ -115,6 +124,7 @@ const SDK = {
             })
         },
 
+        // Function for selecting all smoothies from database
         getSmoothies: (callback) => {
             SDK.request({
                 method: "GET",
@@ -129,6 +139,7 @@ const SDK = {
             })
         },
 
+        // Function for adding selected items to basket
         addToBasket: (item) => {
             let basket = SDK.Storage.load("basket");
 
@@ -155,6 +166,7 @@ const SDK = {
             SDK.Storage.persist("basket", basket);
         },
 
+        // Function to remove selected items from basket
         removeFromBasket: (itemId) => {
             let basket = SDK.Storage.load("basket");
 
@@ -174,6 +186,8 @@ const SDK = {
     },
 
     Orders: {
+
+        // Function for creating an order
         createOrder: (items, callback) => {
             SDK.request({
                 method: "POST",
@@ -192,6 +206,7 @@ const SDK = {
             })
         },
 
+        // Function for selecting all orders from database
         getAll: (callback) => {
             SDK.request({
                 method: "GET",
@@ -206,6 +221,7 @@ const SDK = {
             })
         },
 
+        // Function for selecting all orders from database that is connected to the user that is logged in
         getOrdersById: (callback) => {
             SDK.request({
                 method: "GET",
@@ -220,6 +236,7 @@ const SDK = {
             })
         },
 
+        // Function update order in database to isReady = true
         makeReady: (id, callback) => {
             SDK.request({
                 method: "POST",
@@ -238,9 +255,12 @@ const SDK = {
     Storage: {
         prefix: "KantineAppSDK",
 
+        // Function to add given values to the session storage
         persist: (key, value) => {
             sessionStorage.setItem(SDK.Storage.prefix + key, (typeof value === 'object') ? JSON.stringify(value) : value)
         },
+
+        // Function to load the session storage
         load: (key) => {
             const val = sessionStorage.getItem(SDK.Storage.prefix + key);
             try {
@@ -250,6 +270,8 @@ const SDK = {
                 return val;
             }
         },
+
+        // Function to remove given values to the session storage
         remove: (key) => {
             const removeKey = SDK.Storage.prefix + key;
             sessionStorage.removeItem(removeKey);
@@ -257,8 +279,11 @@ const SDK = {
     },
 
     Encryption: {
+
+        // Function for encrypting and decrypting data
         encryptDecrypt(input) {
             var isEncrypted = true;
+
             if (input != null && input != "") {
                 if (isEncrypted) {
                     var key = ['Y', 'O', 'L', 'O'];
@@ -275,7 +300,7 @@ const SDK = {
                     return input;
                 }
             }
-            else{
+            else {
                 return input;
             }
         }

@@ -171,7 +171,7 @@ $(document).ready( () => {
         });
     });
 
-    // Function to find all orders for the user that is logged in
+    // Function to select all orders from database that is connected to the user that is logged in
     SDK.Orders.getOrdersById( (error, orders) => {
         if (error) throw error;
 
