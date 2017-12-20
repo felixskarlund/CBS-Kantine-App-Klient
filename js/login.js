@@ -1,4 +1,6 @@
 $(document).ready( () => {
+
+    // When loginButton is clicked, check whether the user is authorized or not
     $("#loginButton").on('click', () => {
         $username = $("#usernameBox").val();
         $password = $("#passwordBox").val();
@@ -14,11 +16,13 @@ $(document).ready( () => {
         })
     });
 
+    // When newUserButton is clicked, change location to createUser page
     $("#newUserButton").on('click', () => {
         window.location.href = "createUser.html";
     });
 });
 
+// Function to check whether a user is personnel or not
 loadUser = () => {
     if (!SDK.Storage.load("isPersonel")) {
         window.location.href = "student.html";
@@ -28,6 +32,7 @@ loadUser = () => {
     }
 };
 
+// Enter-key function in both inputs
 $("#usernameBox").keypress(function (e) {
     if (e.which == 13) {
         $("#loginButton").click();
