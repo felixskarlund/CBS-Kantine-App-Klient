@@ -1,4 +1,6 @@
 $(document).ready( () => {
+
+    // When createUserButton is clicked check whether all requirements are fulfilled
     $("#createUserButton").on('click', () => {
         $username = $("#usernameField").val();
         $password = $("#passwordField").val();
@@ -6,6 +8,8 @@ $(document).ready( () => {
 
         if ($username.length > 4 && $password.length > 4) {
             if ($password == $repeatPassword) {
+
+                // If all requirements are fulfilled, create user with input values
                 SDK.Users.createUser($username, $password, (error, data) => {
                     if (error) {
                         alert("Error. Could not create user.");
@@ -29,6 +33,7 @@ $(document).ready( () => {
     });
 });
 
+// Assign enter-key function in both inputs to function as clicks
 $("#usernameField").keypress(function (e) {
     if (e.which == 13) {
         $("#createUserButton").click();

@@ -32,7 +32,7 @@ loadUser = () => {
     }
 };
 
-// Enter-key function in both inputs
+// Assign enter-key function in both inputs to function as clicks
 $("#usernameBox").keypress(function (e) {
     if (e.which == 13) {
         $("#loginButton").click();
