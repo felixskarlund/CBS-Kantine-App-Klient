@@ -57,15 +57,18 @@ const SDK = {
     logOut: (callback) => {
         SDK.request({
             method:"POST",
-            url:"/start/logout",
+            url:"/start/logout" + SDK.Storage.load("user_id"),
             headers: {
                 Authorization: 'Bearer ' + SDK.Storage.load("BearerToken")
+            },
+            data: {
+                "user_id": SDK.Storage.load("user_id")
             }
         }, (error, data) => {
             if (error) return callback(error);
 
             callback(null, data);
-        })
+        });
 
         SDK.Storage.remove("BearerToken");
         SDK.Storage.remove("isPersonel");
